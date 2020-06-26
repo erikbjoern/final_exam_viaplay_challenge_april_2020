@@ -14,3 +14,30 @@
   width: 100%;
   height: auto;
 }
+
+.header, 
+.footer {
+  display: flex;
+  background-color: #444;
+  position: absolute;
+  width: 100vw;
+  padding: 10px;
+}
+
+.header {
+  top: 0;
+}
+
+.footer {
+  height: 30px;
+  bottom: 0;
+}
+
+.header img {
+  height: 30px;
+  margin-left: 100px;
+}
+
+#series-grid {
+  margin-top: 10vh;
+}
