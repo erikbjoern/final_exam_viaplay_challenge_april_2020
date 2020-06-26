@@ -13,5 +13,6 @@ describe("A list of TV series is displayed", () => {
     cy.get("#series-grid").within(() => {
       cy.get("#greys-anatomy").should("be.visible")
     })
+    cy.get(".series-image").should("have.length", 10)
   })
 })

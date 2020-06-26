@@ -14,7 +14,7 @@ const SeriesGrid = () => {
           "viaplay:products"
         ]
       const imagesList = seriesList.map((series) => (
-       <img className="show" id={`${series.publicPath}`} src={`${series.content.images.landscape.url}`} alt={`${series.publicPath}`}></img>
+       <img className="series-image" id={`${series.publicPath}`} src={`${series.content.images.landscape.url}`} alt={`${series.publicPath}`}></img>
       ))
       setImages(imagesList)
     } catch (error) {

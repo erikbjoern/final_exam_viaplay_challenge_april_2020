@@ -1,4 +1,4 @@
-.show {
+.series-image {
   display: inline-block;
   width: 23%;
   width: calc(25% - ( ( 20px ) * 0.75 ) );
@@ -6,11 +6,11 @@
   margin-bottom: 20px;
 }
 
-.show:nth-child(4n+4) {
+.series-image:nth-child(4n+4) {
   margin-right: 0;
 }
 
-.show img {
+.series-image img {
   width: 100%;
   height: auto;
 }
