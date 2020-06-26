@@ -1,10 +1,9 @@
 import React from 'react';
+import SeriesGrid from './components/SeriesGrid'
 
 const App = () => {
   return (
-    <div className="App">
-      Viaplay challenge
-    </div>
+    <SeriesGrid />
   );
 }
 
