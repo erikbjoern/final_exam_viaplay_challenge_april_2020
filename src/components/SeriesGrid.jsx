@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const SeriesGrid = () => {
-  let [seriesList, setSeriesList] = useState([])
+  const [images, setImages] = useState([])
 
   const fetchSeries = async () => {
     try {
       const response = await axios.get(
         "https://content.viaplay.se/pc-se/serier/samtliga"
       );
-      debugger
-      seriesList =
+      const seriesList =
         response.data._embedded["viaplay:blocks"][0]._embedded[
           "viaplay:products"
         ]
-      const images = seriesList.map((series) => (
-        <img id={`${series.publicPath}`} src={`${series.content.images.landscape.url}`} alt={`${series.publicPath}`} />
+      const imagesList = seriesList.map((series) => (
+       <img id={`${series.publicPath}`} src={`${series.content.images.landscape.url}`} alt={`${series.publicPath}`}></img>
       ))
+      setImages(imagesList)
     } catch (error) {
       console.log(error);
     }
@@ -25,8 +25,9 @@ const SeriesGrid = () => {
   useEffect(() =>{
     fetchSeries()
   }, [])
+  debugger
 
-  return <div id="series-grid">{seriesList}</div>;
+  return <div id="series-grid">{images}</div>;
 };
 
 export default SeriesGrid;
